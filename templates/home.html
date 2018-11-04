@@ -1,0 +1,40 @@
+{% extends 'base_midterm.html' %}
+{% block content %}
+<div class="page-header">
+    <h1> Marvel Form </h1>
+</div>
+
+<div>
+<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.name.label }} {{ form.name() }}
+	{{ form.submit() }}
+</form>
+</div>
+
+<div>
+<form method="GET">
+	{{ form2.hidden_tag() }}
+	{{ form2.comic_keyword.label }} {{ form2.comic_keyword() }}
+	{{ form2.submit() }}
+</form>
+</div>
+
+{% if results %}
+	<p> Search results for {{ keyword }}<p><br>
+	{% for res in results %}
+		{{ res.name }}<br>
+	{% endfor %}
+{% endif %}
+
+
+<!-- <br>
+<strong><p>NOTE: Anything you submit here will be visible to instructors / the entire class / the public. Don't put anything here that you wouldn't tell the whole class. Fair warning.</strong> <i>(Jackie can also delete anything and remove this from the internet...)</i></p><br> -->
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

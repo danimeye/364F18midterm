@@ -1,0 +1,15 @@
+{% extends 'base_midterm.html' %}
+
+{% block content %}
+
+<h1>Searched Characters </h1>
+
+{% for char in all_characters %}
+    <p>{{ char }}</p>
+{% endfor %}
+
+{% if not all_characters %}
+    There are no characters to show.
+{% endif %}
+
+{% endblock %}

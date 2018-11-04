@@ -1,0 +1,16 @@
+<h3>Navigation</h3>
+<ul>
+    <li><a href="{{ url_for('home')}}">Go to Marvel Character Input Form.</a></li>
+    <li><a href="{{ url_for('all_characters')}}">See all characters.</a></li>
+    <li><a href="{{ url_for('all_comics')}}">See all comics so far.</a></li>
+</ul>
+
+{% block content %}
+
+<form action="{{ url_for('home') }}" method="POST">
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base_midterm.html' %}
+
+{% block content %}
+
+
+{% for char, comics in comic_dict.items() %}
+	{{ char }}
+	<ul>
+	{% for comic in comics %}
+		<li> {{ comic }} </li>
+	{% endfor %}
+	</ul>
+{% endfor %}
+
+
+<!-- <div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div> -->
+
+{% endblock %}
