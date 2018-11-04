@@ -4,6 +4,6 @@ App description: This app allows a someone to search for a Marvel character and 
 
 App routes:
 
-http://localhost:5000/ -> home.html *or* all_characters.html
-http://localhost:5000/characters -> all_characters.html
-http://localhost:5000/comics -> all_comics.html
+- http://localhost:5000/ -> home.html *or* all_characters.html
+- http://localhost:5000/characters -> all_characters.html
+- http://localhost:5000/comics -> all_comics.html
